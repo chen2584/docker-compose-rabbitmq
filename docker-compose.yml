@@ -1,0 +1,11 @@
+version: "3.1"
+services:
+  my-rabbitmq:
+    image: rabbitmq:latest
+    environment:
+      - RABBITMQ_DEFAULT_USER=user
+      - RABBITMQ_DEFAULT_PASS=password
+    ports:
+      - 5672:5672
+    volumes:
+      - ./rabbitmq:/var/lib/rabbitmq
